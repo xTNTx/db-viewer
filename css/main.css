@@ -1,0 +1,355 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    color: #FFFFFF;
+    background-image: url('../img/background.png');
+    font-size: 11pt;
+}
+
+a {
+    color: #FFE799;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* main blocks */
+.container {
+    padding: 10px;
+    border: none;
+    border-radius: 15px;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.85);
+}
+
+.container.tables {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 180px;
+}
+
+.container.debug,
+.container.controls,
+.container.footer {
+    margin: 20px 20px 10px 240px;
+}
+
+.container.results {
+    margin: 0 20px 0 240px;
+}
+
+.container.footer {
+    text-align: center;
+}
+/* end of main blocks */
+.container.tables p {
+    margin-bottom: 5px;
+}
+
+.container.tables ul {
+    margin-left: 10px;
+    height:600px;
+    list-style-type: none;
+}
+
+.container.tables li span {
+    color: #FFC505;
+    font-weight: bold;
+}
+
+.container.controls {
+    position: relative;
+    min-width: 610px;
+    min-height: 52px;
+}
+
+.container.controls .column.right {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 9pt;
+    line-height: 110%;
+}
+
+.container.controls form {
+    margin: 5px 0;
+}
+
+.container.controls form input {
+    width: 30px;
+    height: 18px;
+    border: 1px solid #FFE799;
+    text-align: center;
+}
+
+.container.controls form label {
+    font-weight: bold;
+}
+
+.container.controls form div {
+    display: inline-block;
+    margin-right: 30px;
+}
+
+.container.controls .limit em {
+    font-size: 9pt;
+}
+
+.container.controls .pages .prev,
+.container.controls .pages .next {
+    position: relative;
+    top: 5px;
+    display: inline-block;
+    margin: 0 5px;
+    width: 12px;
+    height: 19px;
+    background: url('../img/paginate_icons.png') no-repeat;
+}
+
+.container.controls .pages a.prev {
+    background-position: 0 0;
+}
+
+.container.controls .pages a.next {
+    background-position: -12px 0;
+}
+
+.container.controls .pages span.prev {
+    background-position: 0 -19px;
+}
+
+.container.controls .pages span.next {
+    background-position: -12px -19px;
+}
+
+.container.results .data table {
+    font-family: 'Consolas', monospace;
+}
+
+.container.results .data tr.diff {
+    background: rgb(30, 30, 30);
+    background: rgba(30, 30, 30, 0.6);
+}
+
+.container.results .data tr:hover {
+    background: rgb(50, 50, 50);
+    background: rgba(50, 50, 50, 0.6);
+}
+
+.container.results .data th {
+    padding: 2px 5px 10px;
+}
+
+.container.results .data th a.asc span,
+.container.results .data th a.desc span {
+    position: relative;
+    top: 3px;
+    left: 3px;
+    display: inline-block;
+    width: 8px;
+    height: 11px;
+    background: url('../img/sort_icons.png') no-repeat;
+}
+
+.container.results .data th a.desc span {
+    background-position: 0 -11px;
+}
+
+.container.results .data td {
+    padding: 4px 5px;
+}
+
+/* custom content scroll bar */
+/* vertical scrollbar */
+.mCSB_container{
+    width:auto;
+    margin-right:20px;
+    overflow:hidden;
+}
+.mCSB_container.mCS_no_scrollbar{
+    margin-right:0;
+}
+.mCustomScrollBox .mCSB_scrollTools{
+    width:16px;
+    height:100%;
+    top:0;
+    right:0;
+}
+.mCSB_scrollTools .mCSB_draggerContainer{
+    height:100%;
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    box-sizing:border-box;
+}
+.mCSB_scrollTools .mCSB_buttonUp+.mCSB_draggerContainer{
+    padding-bottom:40px;
+}
+.mCSB_scrollTools .mCSB_draggerRail{
+    width:2px;
+    height:100%;
+    margin:0 auto;
+    -webkit-border-radius:10px;
+    -moz-border-radius:10px;
+    border-radius:10px;
+}
+.mCSB_scrollTools .mCSB_dragger{
+    cursor:pointer;
+    width:100%;
+    height:30px;
+}
+.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{
+    width:4px;
+    height:100%;
+    margin:0 auto;
+    -webkit-border-radius:10px;
+    -moz-border-radius:10px;
+    border-radius:10px;
+    text-align:center;
+}
+.mCSB_scrollTools .mCSB_buttonUp,
+.mCSB_scrollTools .mCSB_buttonDown{
+    height:20px;
+    overflow:hidden;
+    margin:0 auto;
+    cursor:pointer;
+}
+.mCSB_scrollTools .mCSB_buttonDown{
+    bottom:0;
+    margin-top:-40px;
+}
+/* horizontal scrollbar */
+.mCSB_horizontal .mCSB_container{
+    height:auto;
+    margin-right:0;
+    margin-bottom:20px;
+    overflow:hidden;
+}
+.mCSB_horizontal .mCSB_container.mCS_no_scrollbar{
+    margin-bottom:0;
+}
+.mCSB_horizontal.mCustomScrollBox .mCSB_scrollTools{
+    width:100%;
+    height:16px;
+    top:auto;
+    right:auto;
+    bottom:0;
+    left:0;
+    overflow:hidden;
+}
+.mCSB_horizontal .mCSB_scrollTools .mCSB_draggerContainer{
+    height:100%;
+    width:auto;
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    box-sizing:border-box;
+    overflow:hidden;
+}
+.mCSB_horizontal .mCSB_scrollTools .mCSB_buttonLeft+.mCSB_draggerContainer{
+    padding-bottom:0;
+    padding-right:20px;
+}
+.mCSB_horizontal .mCSB_scrollTools .mCSB_draggerRail{
+    width:100%;
+    height:2px;
+    margin:7px 0;
+    -webkit-border-radius:10px;
+    -moz-border-radius:10px;
+    border-radius:10px;
+}
+.mCSB_horizontal .mCSB_scrollTools .mCSB_dragger{
+    width:30px;
+    height:100%;
+}
+.mCSB_horizontal .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{
+    width:100%;
+    height:4px;
+    margin:6px auto;
+    -webkit-border-radius:10px;
+    -moz-border-radius:10px;
+    border-radius:10px;
+}
+.mCSB_horizontal .mCSB_scrollTools .mCSB_buttonLeft,
+.mCSB_horizontal .mCSB_scrollTools .mCSB_buttonRight{
+    width:20px;
+    height:100%;
+    overflow:hidden;
+    margin:0 auto;
+    cursor:pointer;
+    float:left;
+}
+.mCSB_horizontal .mCSB_scrollTools .mCSB_buttonRight{
+    right:0;
+    bottom:auto;
+    margin-left:-40px;
+    margin-top:-16px;
+    float:right;
+}
+
+/* default scrollbar colors and backgrounds */
+.mCustomScrollBox .mCSB_scrollTools{
+    opacity:0.75;
+}
+.mCustomScrollBox:hover .mCSB_scrollTools{
+    opacity:1;
+}
+.mCSB_scrollTools .mCSB_draggerRail{
+    background:#000; /* rgba fallback */
+    background:rgba(0,0,0,0.4);
+    filter:"alpha(opacity=40)"; -ms-filter:"alpha(opacity=40)"; /* old ie */
+}
+.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{
+    background:#fff; /* rgba fallback */
+    background:rgba(255,255,255,0.75);
+    filter:"alpha(opacity=75)"; -ms-filter:"alpha(opacity=75)"; /* old ie */
+}
+.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar{
+    background:rgba(255,255,255,0.85);
+    filter:"alpha(opacity=85)"; -ms-filter:"alpha(opacity=85)"; /* old ie */
+}
+.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,
+.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar{
+    background:rgba(255,255,255,0.9);
+    filter:"alpha(opacity=90)"; -ms-filter:"alpha(opacity=90)"; /* old ie */
+}
+.mCSB_scrollTools .mCSB_buttonUp,
+.mCSB_scrollTools .mCSB_buttonDown,
+.mCSB_scrollTools .mCSB_buttonLeft,
+.mCSB_scrollTools .mCSB_buttonRight{
+    background-image:url('../img/mCSB_buttons.png');
+    background-repeat:no-repeat;
+    opacity:0.4;
+    filter:"alpha(opacity=40)"; -ms-filter:"alpha(opacity=40)"; /* old ie */
+}
+.mCSB_scrollTools .mCSB_buttonUp{
+    background-position:0 0;
+}
+.mCSB_scrollTools .mCSB_buttonDown{
+    background-position:0 -20px;
+}
+.mCSB_scrollTools .mCSB_buttonLeft{
+    background-position:0 -40px;
+}
+.mCSB_scrollTools .mCSB_buttonRight{
+    background-position:0 -56px;
+}
+.mCSB_scrollTools .mCSB_buttonUp:hover,
+.mCSB_scrollTools .mCSB_buttonDown:hover,
+.mCSB_scrollTools .mCSB_buttonLeft:hover,
+.mCSB_scrollTools .mCSB_buttonRight:hover{
+    opacity:0.75;
+    filter:"alpha(opacity=75)"; -ms-filter:"alpha(opacity=75)"; /* old ie */
+}
+.mCSB_scrollTools .mCSB_buttonUp:active,
+.mCSB_scrollTools .mCSB_buttonDown:active,
+.mCSB_scrollTools .mCSB_buttonLeft:active,
+.mCSB_scrollTools .mCSB_buttonRight:active{
+    opacity:0.9;
+    filter:"alpha(opacity=90)"; -ms-filter:"alpha(opacity=90)"; /* old ie */
+}
+/* end of custom content scroll bar */
